@@ -8,7 +8,7 @@ cursor.execute('''
                id integer primary key autoincrement,
                titulo text not null,
                descricao text,
-               prazo datetime not null,
+               prazo datetime,
                status text not null default 'pendente' check (status in('pendente','ativo','completado'))
          )
     ''')
